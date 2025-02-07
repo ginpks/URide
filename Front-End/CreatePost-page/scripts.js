@@ -111,9 +111,6 @@ export function savePost(type) {
         };
     }
 
-    // storePostInDB(postData);
-
-    // const token = localStorage.getItem('token');
     fetch('http://localhost:3000/api/posts', {
         method: 'POST',
         headers: {

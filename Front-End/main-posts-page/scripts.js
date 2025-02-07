@@ -1,7 +1,3 @@
-// import { BaseComponent } from './BaseComponent.js';
-// import { EventHub } from './EventHub.js';
-// import { Events } from './Events.js';
-// import { TaskRepositoryService } from './TaskRepositoryService.js';
 import {openDatabase, storePostInDB} from '../CreatePost-page/scripts.js'
 
 
@@ -143,34 +139,6 @@ sortDropdown.addEventListener('change', function () {
 });
 
 
-// Formatting date and time - Lana
-// function getCombinedDateTime(dateInputId, timeInputId) {
-//     const date = document.getElementById(dateInputId).value;
-//     const time = document.getElementById(timeInputId).value;
-
-//     if (!date || !time) {
-//         console.error("Invalid date or time input:", { date, time });
-//         return null;
-//     }
-
-//     return new Date(`${date}T${time}`).toISOString();  // Returns an ISO string.
-// }
-// function updateFilterCriteria() {
-//     filterCriteria.startTime = getCombinedDateTime('start-date', 'start-time');
-//     filterCriteria.endTime = getCombinedDateTime('end-date', 'end-time');
-
-//     if (filterCriteria.startTime && filterCriteria.endTime) {
-//         console.log('Start Time:', filterCriteria.startTime);
-//         console.log('End Time:', filterCriteria.endTime);
-//     }
-// }
-
-// document.getElementById('start-time').addEventListener('change', updateFilterCriteria);
-// document.getElementById('start-date').addEventListener('change', updateFilterCriteria);
-// document.getElementById('end-time').addEventListener('change', updateFilterCriteria);
-// document.getElementById('end-date').addEventListener('change', updateFilterCriteria);
-
-
 // Search feature - Lana
 // Select the search input and posts container
 const searchInput = document.querySelector('#searchInput'); 
@@ -293,16 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Google Maps search autocomplete
-  // const searchInput = document.querySelector('.user-search-bar .search-input');
-  // if (searchInput && typeof google !== 'undefined' && google.maps) {
-  //   const searchBox = new google.maps.places.SearchBox(searchInput);
-  //   searchBox.addListener('places_changed', () => {
-  //     const places = searchBox.getPlaces();
-  //     if (places.length === 0) return;
-  //     console.log('Selected Place:', places[ 0].name);
-  //   });
-  // }
+
 });
 
 
@@ -361,9 +320,7 @@ function createPost(post) {
     postDiv.appendChild(thirdLineDiv);
 
     //add redirect link
-    // postDiv.addEventListener('click', ()=>{
-    //     window.location.href = `../chat-page/index.html?id=${post.id}`;
-    // })
+
 
     postDiv.addEventListener('click', async (event) => {
         // Check if a post element is clicked

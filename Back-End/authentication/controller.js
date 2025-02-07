@@ -1,5 +1,4 @@
 import bcrypt from "bcryptjs";
-// import dotenv from "dotenv";
 import User from "../authentication/user.js";
 import passport from 'passport';
 
@@ -60,16 +59,7 @@ export const login = async (req, res, next) => {
     }
 };
 
-//logout
-// export const logout = (req, res) => {
-//     req.logout(function (err) {
-//         if (err) {
-//             res.json(factoryResponse(500, "Logout failed"));
-//             return;
-//         }
-//         res.json(factoryResponse(200, "Logout successful! See you."));
-//     });
-// };
+//handles logout
 export const logout = (req, res) => {
   req.logout((err) => {
       if (err) {

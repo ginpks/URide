@@ -1,8 +1,5 @@
-// import bcrypt from "bcryptjs";
-// import dotenv from "dotenv";
 import { Post } from "./post.js";
 
-// const { Post } = require('./post');
 
 //Create post
 export const createPost = async (req, res) => {

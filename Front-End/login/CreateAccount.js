@@ -29,7 +29,6 @@ createAccountButton.addEventListener('click', async(event)=>{
       });
   
       if (response.ok) {
-        // const data = await response.json();
         alert('Account created successfully');
         // Redirect to the main page or login page
         window.location.href = 'LoginPage.html';

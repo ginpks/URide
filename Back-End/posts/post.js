@@ -1,5 +1,4 @@
 import { Sequelize, DataTypes } from "sequelize";
-// const { Sequelize, DataTypes } = require('sequelize');
 
 // Solving db path issue
 import path from 'path';
@@ -11,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // and storing it in posts.sqlite
 const postDatabase = new Sequelize({
     dialect: 'sqlite',
-    // storage: './posts.sqlite', // sqlite db created at root dir, don't know the reason
+    // sqlite db created at root dir, don't know the reason
     storage: path.resolve(__dirname, '../source/posts.sqlite'), // Solving db path issue
     logging: console.log,
 });
